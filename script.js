@@ -45,18 +45,16 @@ console.log(allChar);
 // console.log(allChar[i][j]);
 
 //Prompt
+var userCharAmt;
+
 function questions() {
-  var question1 = window.prompt("What is your mother's maiden name?");
-  var question2 = window.prompt("What is the name of the street you grew up on?");
-  var question3 = window.prompt("What year did you graduate highschool?");
-  var userCharAmt = window.prompt("Select a password length between 8 and 128 characters");
+  userCharAmt = window.prompt("Select a password length between 8 and 128 characters");
   if (Number.isInteger(userCharAmt) && (userCharAmt >= 8 && userCharAmt <= 128)) {
     return true;
   } else {
     window.prompt("Please select password length between 8 and 128 characters")
     return false;
   }
-
 };
 
 function includeChars() {
@@ -86,7 +84,7 @@ console.log(allChar);
 //Multi-dimensional array
 function generatePassword() {
   passWord = [];
-  for (var i = 0; i < userCharAmt; i++) {
+  for (var i = 0; i<userCharAmt; i++) {
     var first = Math.floor(Math.random() * 4)
     console.log("First Array Value")
     console.log(first)
