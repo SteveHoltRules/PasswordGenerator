@@ -56,23 +56,22 @@ function includeChars() {
 function generatePassword() {
   console.log("in generate password");
   console.log("User Character Amount : " + userCharAmt);
-  questions();
   includeChars();
+  console.log(allChar);
   passWord = [];
   for (var i = 0; i<userCharAmt; i++) {
-    var first = Math.floor(Math.random() * 4)
-    console.log("First Array Value")
-    console.log(first)
-    var arrLength = (allChar[first].length)
-    console.log("Array Length")
-    console.log(arrLength)
-    var second = Math.floor(Math.random() * arrLength)
-    console.log("Second Value")
-    console.log(second)
-    console.log("Password Value")
+    var first = Math.floor(Math.random() * 4);
+    console.log("First Array Value");
+    console.log(first);
+    var arrLength = (allChar[first].length);
+    console.log("Array Length");
+    console.log(arrLength);
+    var second = Math.floor(Math.random() * arrLength);
+    console.log("Second Value");
+    console.log(second);
+    console.log("Password Value");
     console.log(allChar[first][second]);
-    console.log(i);
-    var j = allChar[first][second];
+    var j = (allChar[first][second]);
     passWord.push(j);
   };
   passWord = passWord.join('').trim();
@@ -85,6 +84,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   console.log("in writePassword");
   generatePassword();
+  console.log(passWord);
   var password = passWord;
   password = document.querySelector("#password");
 };
