@@ -1,15 +1,14 @@
 // Assignment code here
-
 //List of Arrays
 var capitalAlpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var lowerAlpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'z', 'y', 'z'];
 var specialChar = ['!', '@', '#', '$', '&'];
 var genNumb = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//Declare variables called in functions
 let allChar = [];
 let passWord = [];
 
-//Prompt
-// Verify the content, convert the prompt to a number
+//UserPrompt: Verify the content, convert the prompt to a number
 function questions() {
   var userPrompt = window.prompt("Select a password length between 8 and 128 characters");
   var userChars = parseInt(userPrompt);
@@ -39,9 +38,9 @@ function includeChars() {
   if (numbnumbs) {
     allChar.push(genNumb)
   };
-}
+};
 
-//Multi-dimensional array to assign the characters
+//Multi-dimensional array to assign the characters to the password array
 function generatePassword() {
   console.log("in generate password");
   var userCharAmt = questions();
@@ -50,16 +49,8 @@ function generatePassword() {
   console.log(allChar);
   for (var i = 0; i<userCharAmt; i++) {
     var first = Math.floor(Math.random() * 4);
-    console.log("First Array Value");
-    console.log(first);
     var arrLength = (allChar[first].length);
-    console.log("Array Length");
-    console.log(arrLength);
     var second = Math.floor(Math.random() * arrLength);
-    console.log("Second Value");
-    console.log(second);
-    console.log("Password Value");
-    console.log(allChar[first][second]);
     var j = (allChar[first][second]);
     passWord.push(j);
   };
