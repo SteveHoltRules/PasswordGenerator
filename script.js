@@ -23,7 +23,7 @@ function questions() {
 //Characters to include | Selected through prompts
 function includeChars() {
   var capitalLets = window.confirm("Should capital letters be included in your password?")
-  if(capitalLets){
+  if (capitalLets) {
     allChar.push(capitalAlpha)
   };
   var lowerLets = window.confirm("Should lowercase letters be included in your password?")
@@ -47,7 +47,7 @@ function generatePassword() {
   console.log("User Character Amount : " + userCharAmt);
   includeChars();
   console.log(allChar);
-  for (var i = 0; i<userCharAmt; i++) {
+  for (var i = 0; i < userCharAmt; i++) {
     var first = Math.floor(Math.random() * 4);
     var arrLength = (allChar[first].length);
     var second = Math.floor(Math.random() * arrLength);
