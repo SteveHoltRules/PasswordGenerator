@@ -9,5 +9,9 @@ The project was to create a password generator using Javascript that take inputs
 
  * JS
   
+## Screenshot
+
+![image](https://user-images.githubusercontent.com/78341753/126848487-c199c752-1e16-4e88-9920-dbc3b7c79869.png)
+
 ## Website
 https://steveholtrules.github.io/PasswordGenerator/
