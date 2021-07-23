@@ -9,16 +9,37 @@ let allChar = [];
 let passWord = [];
 
 //UserPrompt: Verify the content, convert the prompt to a number
+// function questions() {
+//   var userPrompt = window.prompt("Select a password length between 8 and 128 characters");
+//   var userChars = parseInt(userPrompt);
+//   if (Number.isInteger(userChars) && (userChars >= 8 && userChars <= 128)) {
+//     return userChars;
+//   } else {
+//     window.prompt("Please select password length between 8 and 128 characters")
+//     return false;
+//   }
+// };
+
 function questions() {
+  console.log("in Questions");
   var userPrompt = window.prompt("Select a password length between 8 and 128 characters");
   var userChars = parseInt(userPrompt);
+  console.log("USER CHARACTER AMOUNT");
+  console.log(userChars);
   if (Number.isInteger(userChars) && (userChars >= 8 && userChars <= 128)) {
+    console.log("USER CHARACTER AMOUNT");
+    console.log(userChars);
     return userChars;
   } else {
-    window.prompt("Please select password length between 8 and 128 characters")
-    return false;
-  }
+    console.log("PAST PROMPT 1");
+    userPrompt = undefined;
+    userChars = undefined;
+    delete (userChars);
+    delete (userPrompt);
+    questions();
+  };
 };
+
 
 //Characters to include | Selected through prompts
 function includeChars() {
